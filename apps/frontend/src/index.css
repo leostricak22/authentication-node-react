@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+form h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.authentication-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.homepage-container h1 {
+    margin-bottom: 20px;
+}
+
+.homepage-container .description {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border-bottom: darkgreen 1px solid;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background-color: #e8e8e8;
+}
+
+nav a:hover {
+    background-color: darkgreen;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+nav a:hover::after {
+    background-color: darkgreen;
+    transition: background-color 0.3s;
+}
