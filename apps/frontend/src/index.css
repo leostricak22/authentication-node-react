@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #003a00;
 }
 
 .authentication-container {
@@ -96,4 +96,8 @@ nav a:hover {
 nav a:hover::after {
     background-color: darkgreen;
     transition: background-color 0.3s;
+}
+
+.no-account {
+    margin-top: 20px;
 }
