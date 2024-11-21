@@ -15,3 +15,5 @@ async function query(sql, params=[]) {
         if (connection) connection.release();
     }
 }
+
+module.exports = { query };
