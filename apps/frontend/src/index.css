@@ -130,3 +130,12 @@ table td {
 table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+p.link {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+p.link:hover {
+    text-decoration: underline;
+}
