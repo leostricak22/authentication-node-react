@@ -1,5 +1,4 @@
 const { hash } = require('bcryptjs');
-const { v4: generateId } = require('uuid');
 
 const { NotFoundError } = require('../util/errors');
 const dbFunctions = require('../util/database/util');
