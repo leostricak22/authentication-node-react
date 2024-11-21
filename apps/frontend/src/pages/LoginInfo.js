@@ -6,7 +6,8 @@ export default function LoginInfo() {
     return (
         <div>
             <h1>Login Information</h1>
-            <p>Token: <pre>{token}</pre></p>
+            <p>Token: </p>
+            <pre>{token}</pre>
         </div>
     );
 }
