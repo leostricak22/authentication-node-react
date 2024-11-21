@@ -37,6 +37,10 @@ export async function action({request}) {
         throw json({message: "Something went wrong."}, {status: 500})
     }
 
-    // manage token
+    const resData = await response.json();
+    const token = resData.token;
+
+    localStorage.setItem('token', token);
+
     return redirect("/")
 }

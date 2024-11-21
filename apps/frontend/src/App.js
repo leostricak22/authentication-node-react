@@ -4,6 +4,7 @@ import AuthenticationPage, {action as authAction} from "./pages/AuthenticationPa
 import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
+import FetchRoutesPage from "./pages/FetchRoutesPage";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
                 element: <AuthenticationPage />,
                 action: authAction
             },
+            {
+                path: 'fetch-routes',
+                element: <FetchRoutesPage />
+            }
         ]
     }
 ])
