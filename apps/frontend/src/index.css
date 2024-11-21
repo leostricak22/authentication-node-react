@@ -33,6 +33,8 @@ button {
     background-color: darkgreen;
     color: white;
     cursor: pointer;
+    font-size: 14px;
+
 }
 
 button:hover {
@@ -61,13 +63,20 @@ label {
 
 nav {
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    box-shadow: 150px 150px 150px 150px white inset;
+}
+
+.navLeft {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
 }
 
-nav a {
+.navLeft a {
     position: relative;
     padding: 20px;
     background-color: white;
@@ -76,7 +85,7 @@ nav a {
     border-bottom: darkgreen 1px solid;
 }
 
-nav a::after {
+.navLeft a::after {
     content: '';
     position: absolute;
     top: 10%;
@@ -86,15 +95,23 @@ nav a::after {
     background-color: #e8e8e8;
 }
 
-nav a:hover {
+.navLeft a:hover {
     background-color: darkgreen;
     color: white;
     transition: background-color 0.3s;
 }
 
-nav a:hover::after {
+.navLeft a:hover::after {
     background-color: darkgreen;
     transition: background-color 0.3s;
+}
+
+.navRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    background-color: white;
 }
 
 .no-account {
@@ -138,4 +155,42 @@ p.link {
 
 p.link:hover {
     text-decoration: underline;
+}
+
+.auth {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    text-underline: none;
+}
+
+.authForm {
+    display: flex;
+    justify-content: flex-end;
+    width: 150px;
+    margin-right: 15px;
+}
+
+.authLink {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+    margin-right: 15px;
+    text-decoration: none;
+    width: 130px;
+    text-align: center;
+    font-size: 14px;
+}
+
+a.active {
+    background-color: darkgreen;
+    color: white;
+}
+
+a.active::after {
+    background-color: darkgreen;
+    transition: background-color 0.3s;
 }

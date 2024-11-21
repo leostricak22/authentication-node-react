@@ -5,12 +5,17 @@ import HomePage from "./pages/HomePage";
 import ErrorPage from "./pages/ErrorPage";
 import RootLayout from "./pages/RootLayout";
 import FetchRoutesPage from "./pages/FetchRoutesPage";
+import {action as logoutAction} from "./pages/Logout";
+import {checkAuthLoader, tokenLoader} from "./util/auth";
+import LoginInfo from "./pages/LoginInfo";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <RootLayout />,
         errorElement: <ErrorPage />,
+        id: "root",
+        loader: tokenLoader,
         children: [
             {
                 index : true,
@@ -24,6 +29,15 @@ const router = createBrowserRouter([
             {
                 path: 'fetch-routes',
                 element: <FetchRoutesPage />
+            },
+            {
+                path: 'login-info',
+                element: <LoginInfo />,
+                loader: checkAuthLoader
+            },
+            {
+                path: 'logout',
+                action: logoutAction
             }
         ]
     }

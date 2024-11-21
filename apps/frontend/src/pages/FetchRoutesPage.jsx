@@ -50,7 +50,7 @@ export default function FetchRoutesPage() {
             </table>
             <div>
                 <h2>Response</h2>
-                <pre>{loading ? "Loading..." : response?.message}</pre>
+                <pre>{response === null ? "Click on a link to get a response." : loading ? "Loading..." : response?.message}</pre>
             </div>
         </div>
     );
