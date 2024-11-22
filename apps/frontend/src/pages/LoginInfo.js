@@ -7,7 +7,7 @@ export default function LoginInfo() {
         <div>
             <h1>Login Information</h1>
             <p>Token: </p>
-            <pre>{token}</pre>
+            <p className="token">{token}</p>
         </div>
     );
 }

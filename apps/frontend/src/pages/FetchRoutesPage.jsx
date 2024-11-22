@@ -2,6 +2,7 @@ import {useState} from "react";
 import {getAuthToken} from "../util/auth";
 
 export default function FetchRoutesPage() {
+    const [status, setStatus] = useState(null);
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -9,8 +10,8 @@ export default function FetchRoutesPage() {
         setLoading(true);
 
         try {
-            console.log(getAuthToken())
-            const response = await fetch("http://localhost:8080"+route, {
+            console.log(process.env.REACT_APP_API_URL+route);
+            const response = await fetch(process.env.REACT_APP_API_URL+route, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -20,8 +21,10 @@ export default function FetchRoutesPage() {
             const data = await response.json();
 
             setResponse(data);
+            setStatus(response.status);
         } catch (error) {
             setResponse(error);
+
         }
 
         setLoading(false);
@@ -50,7 +53,7 @@ export default function FetchRoutesPage() {
             </table>
             <div>
                 <h2>Response</h2>
-                <pre>{response === null ? "Click on a link to get a response." : loading ? "Loading..." : response?.message}</pre>
+                <pre>{response === null ? "Click on a link to get a response." : loading ? "Loading..." : ("Message\t" + response?.message + " \nStatus\t" + status)}</pre>
             </div>
         </div>
     );

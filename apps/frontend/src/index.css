@@ -194,3 +194,36 @@ a.active::after {
     background-color: darkgreen;
     transition: background-color 0.3s;
 }
+
+
+@media screen and (max-width: 650px) {
+    nav {
+        height: 60px;
+    }
+
+    .navLeft a {
+        padding: 0 10px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navRight {
+        width: 100%;
+    }
+
+    .authForm {
+        width: 100px;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+p.token {
+    word-break: break-all;
+}

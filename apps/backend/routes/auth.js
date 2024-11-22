@@ -49,6 +49,7 @@ router.post('/login', async (req, res) => {
   let user;
   try {
     user = await get(email);
+
   } catch (error) {
     return res.status(401).json({ message: 'Authentication failed.' });
   }
@@ -62,7 +63,7 @@ router.post('/login', async (req, res) => {
   }
 
   const token = createJSONToken(email);
-  res.json({ token });
+  return res.json({ token });
 });
 
 module.exports = router;

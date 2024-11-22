@@ -15,7 +15,6 @@ app.use((req, res, next) => {
 });
 
 app.use(authRoutes);
-
 app.use('/test', testRoutes);
 
 app.use((error, req, res, next) => {
